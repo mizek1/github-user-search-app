@@ -1,0 +1,78 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  background-color: var(--background-color-secondary);
+  border-radius: 15px;
+  padding: 0.65rem 0.7rem 0.75rem 1.6rem;
+
+  .input {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1;
+  }
+
+  .action {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  input {
+    width: 100%;
+    appearance: none;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    color: var(--primary-color-font);
+    background-color: transparent;
+    border: none;
+    caret-color: var(--primary-color);
+    flex: 1;
+
+    &--error {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: var(--secondary-color-font);
+      font-weight: 400;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    appearance: none;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white);
+    padding: 1.25rem 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+
+  .error {
+    color: #f74646;
+    font-size: 1.3rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}

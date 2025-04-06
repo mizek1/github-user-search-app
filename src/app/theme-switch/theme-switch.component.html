@@ -1,0 +1,7 @@
+@let lightTheme = service.theme() === 'light';
+@let themeIcon = lightTheme ? 'moon' : 'sun';
+
+<button class="theme-switch" (click)="service.toggleTheme()">
+  <span>{{ lightTheme ? 'dark' : 'light' }}</span>
+  <img [alt]="themeIcon" [src]="`icon-${themeIcon}.svg`" />
+</button>

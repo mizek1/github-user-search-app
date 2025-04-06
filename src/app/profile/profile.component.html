@@ -1,0 +1,58 @@
+<div class="header">
+  <img class="header__image" alt="profile image" [src]="user().avatar_url" />
+  <div>
+    <h1 class="header__name">{{ user().name ?? user().login }}</h1>
+    <a
+      class="header__username"
+      [href]="`https://github.com/${user().login}`"
+      >{{ `@${user().login}` }}</a
+    >
+    <p class="header__created-at">
+      Joined {{ user().created_at | date: 'dd MMM yyyy' }}
+    </p>
+  </div>
+</div>
+
+<p class="bio" [class.bio--empty]="!user().bio">
+  {{ user().bio ?? 'This profile has no bio' }}
+</p>
+
+<ul class="stats">
+  <li class="stats__item">
+    <h4 class="stats__label">Repos</h4>
+    <p class="stats__value">{{ user().public_repos }}</p>
+  </li>
+  <li class="stats__item">
+    <h4 class="stats__label">Followers</h4>
+    <p class="stats__value">{{ user().followers }}</p>
+  </li>
+  <li class="stats__item">
+    <h4 class="stats__label">Following</h4>
+    <p class="stats__value">{{ user().following }}</p>
+  </li>
+</ul>
+
+<ul class="resources">
+  <li class="resources__item" [class.resources__item--empty]="!user().location">
+    <app-icon icon="location" />
+    <p>{{ user().location || 'Not Available' }}</p>
+  </li>
+  <li class="resources__item" [class.resources__item--empty]="!user().blog">
+    <app-icon icon="website" />
+    <a [href]="user().blog">{{ user().blog || 'Not Available' }}</a>
+  </li>
+  <li
+    class="resources__item"
+    [class.resources__item--empty]="!user().twitter_username">
+    <app-icon icon="twitter" />
+    <a [href]="`http://x.com/${user().twitter_username}`">{{
+      user().twitter_username || 'Not Available'
+    }}</a>
+  </li>
+  <li class="resources__item" [class.resources__item--empty]="!user().company">
+    <app-icon icon="company" />
+    <a [href]="`https://github.com/${user().company?.replace('@', '')}`">{{
+      user().company || 'Not Available'
+    }}</a>
+  </li>
+</ul>

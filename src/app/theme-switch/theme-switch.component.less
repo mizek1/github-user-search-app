@@ -1,0 +1,23 @@
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  span {
+    color: var(--secondary-color-font);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 0.25rem;
+  }
+}

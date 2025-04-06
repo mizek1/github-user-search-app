@@ -1,0 +1,123 @@
+:host {
+  display: block;
+  background-color: var(--background-color-secondary);
+  border-radius: 15px;
+  padding: 3.2rem 2.4rem 4.8rem;
+  box-shadow: var(--shadow);
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1.95rem;
+    margin-bottom: 3.3rem;
+
+    &__image {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+    }
+
+    &__name {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--primary-color-font);
+    }
+
+    &__username {
+      font-size: 1.3rem;
+      font-weight: 400;
+      cursor: pointer;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    &__created-at {
+      color: var(--tertiary-color-font);
+      margin: 0.6rem 0 0;
+    }
+  }
+
+  .bio {
+    margin: 0 0 2.3rem;
+    color: var(--secondary-color-font);
+
+    &--empty {
+      opacity: 0.5;
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 2.4rem;
+    padding: 1.8rem 1.4rem 1.9rem 1.5rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.8rem;
+
+      h4,
+      p {
+        margin: 0;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--secondary-color-font);
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--primary-color-font);
+      }
+    }
+  }
+
+  .resources {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      app-icon {
+        margin-right: 1.6rem;
+      }
+
+      p,
+      a {
+        color: var(--secondary-color-font);
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+
+      &--empty {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+}

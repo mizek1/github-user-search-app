@@ -1,1 +1,14 @@
-<p>github-user-search-app</p>
+<main class="devfinder">
+  <header>
+    <h1>{{ title }}</h1>
+    <app-theme-switch />
+  </header>
+
+  <app-search
+    [hasError]="!!user.error()"
+    (searchEvent)="onSearchEvent($event)" />
+
+  @if (lastSuccessfulSearch(); as user) {
+    <app-profile [user]="user" />
+  }
+</main>

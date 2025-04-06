@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+.light-theme-variables {
+  --primary-color-font: #222731;
+  --secondary-color-font: #4b6a9b;
+  --tertiary-color-font: #697c9a;
+  --background-color: #f6f8ff;
+  --background-color-secondary: #ffffff;
+  --shadow: 0 16px 30px -10px #4660bb19;
+}
+
+.dark-theme-variables {
+  --primary-color-font: #ffffff;
+  --secondary-color-font: #ffffff;
+  --tertiary-color-font: #ffffff;
+  --background-color: #141d2f;
+  --background-color-secondary: #1e2a47;
+  --shadow: none;
+}
+
+:root {
+  --white: #ffffff;
+  --primary-color: hsl(212, 100%, 50%);
+  --secondary-color: hsl(212, 100%, 69%);
+  --primary-color-font: #222731;
+  --secondary-color-font: #4b6a9b;
+  --tertiary-color-font: #697c9a;
+  --background-color: #f6f8ff;
+  --background-color-secondary: #ffffff;
+  --shadow: 0 16px 30px -10px #4660bb19;
+}
+
+* {
+  font-family: 'Space Mono', monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--primary-color-font);
+  background-color: var(--background-color);
+  transition: all 0.3s ease-in-out;
+
+  @media (prefers-color-scheme: dark) {
+    .dark-theme-variables();
+  }
+
+  &[data-theme='dark'] {
+    .dark-theme-variables();
+  }
+
+  &[data-theme='light'] {
+    .light-theme-variables();
+  }
+}

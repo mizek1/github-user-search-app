@@ -1,0 +1,15 @@
+<!-- TODO: Colocar classes -->
+<div class="input">
+  <img alt="search icon" src="icon-search.svg" />
+  <input
+    [class.input--error]="hasError()"
+    placeholder="Search GitHub username…"
+    [(ngModel)]="value" />
+</div>
+
+<div class="action">
+  @if (hasError()) {
+    <span class="error">No results</span>
+  }
+  <button (click)="onClick()">Search</button>
+</div>
