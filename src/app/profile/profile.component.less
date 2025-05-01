@@ -120,4 +120,89 @@
       }
     }
   }
+
+  @media (min-width: 768px) {
+    padding: 4rem;
+
+    .header {
+      gap: 4.1rem;
+      margin-bottom: 2.4rem;
+
+      &__image {
+        width: 11.7rem;
+        height: 11.7rem;
+      }
+
+      &__name {
+        font-size: 2.6rem;
+        margin-bottom: 0.2rem;
+      }
+
+      &__username {
+        font-size: 1.6rem;
+      }
+
+      &__created-at {
+        font-size: 1.5rem;
+        margin-top: 0.4rem;
+      }
+    }
+
+    .bio {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      margin-bottom: 3.2rem;
+    }
+
+    .stats {
+      padding: 1.5rem 3.2rem 1.7rem;
+      margin-bottom: 3rem;
+      justify-content: space-between;
+
+      &__item {
+        align-items: flex-start;
+        gap: 0.1rem;
+
+        h4 {
+          font-size: 1.3rem;
+        }
+
+        p {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    .resources {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 6.5rem;
+      row-gap: 1.9rem;
+
+      &__item {
+        margin-bottom: 0 !important;
+
+        &:nth-child(1) {
+          order: 1;
+        }
+
+        &:nth-child(2) {
+          order: 3;
+        }
+
+        &:nth-child(3) {
+          order: 2;
+        }
+
+        &:nth-child(4) {
+          order: 4;
+        }
+      }
+
+      p,
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

@@ -1,22 +1,62 @@
-.devfinder {
-  padding: 31px 24px;
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 3.6rem;
+  .devfinder {
+    padding: 31px 24px;
 
-    h1 {
-      font-size: 2.6rem;
-      font-weight: bold;
-      color: var(--primary-color-font);
-      margin: 0;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3.6rem;
+
+      h1 {
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: var(--primary-color-font);
+        margin: 0;
+      }
+    }
+
+    app-search {
+      box-shadow: var(--shadow);
+      margin-bottom: 1.6rem;
     }
   }
 
-  app-search {
-    box-shadow: var(--shadow);
-    margin-bottom: 1.6rem;
+  @media (min-width: 376px) {
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .devfinder {
+      margin-top: 140px;
+      max-width: 573px;
+      width: 100%;
+      padding: 0;
+
+      header {
+        margin-bottom: 3.5rem;
+      }
+
+      app-search {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .devfinder {
+      margin-top: 144px;
+      max-width: 730px;
+      width: 100%;
+
+      header {
+        margin-bottom: 3.6rem;
+      }
+    }
   }
 }
