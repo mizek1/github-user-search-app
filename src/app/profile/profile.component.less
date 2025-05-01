@@ -205,4 +205,31 @@
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    padding: 4.4rem 4.8rem 4.8rem 4.8rem;
+
+    .header {
+      position: relative;
+
+      &__image {
+        margin-left: -15.4rem;
+        position: absolute;
+        top: 0;
+      }
+
+      &__created-at {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .header,
+    .bio,
+    .stats,
+    .resources {
+      margin-left: 15.4rem;
+    }
+  }
 }
